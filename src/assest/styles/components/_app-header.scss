@@ -1,0 +1,24 @@
+.app-header {
+  height: 70px;
+  background-color: rgb(212, 250, 253);
+  margin-block-end: 25px;
+  .logo {
+    font-family: r-regular;
+    font-size: 30px;
+    color: rgb(14, 218, 14);
+    span {
+      color: green;
+      font-size: 30px;
+    }
+  }
+  .main-header {
+    font-family: aleg-light;
+    color: rgb(55, 151, 55);
+    font-size: 20px;
+    justify-content: space-between;
+    align-items: center;
+  }
+  a {
+    padding-left: 20px;
+  }
+}
