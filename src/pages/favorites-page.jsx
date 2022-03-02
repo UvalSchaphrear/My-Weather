@@ -14,13 +14,14 @@ class _Favorites extends React.Component {
         if (!favorites.length || !favorites) return <h1>'Loading'</h1>
         return (
             <div className="main-container flex"> {favorites.map(favorite => {
-                return <div className="favorites-container flex" key={favorite.Key}>
-                    <Link to={`/${favorite.Key}`}>
-                        <div>
+                return <div className="favorite-container flex" key={favorite.Key}>
+                    <Link className="favorite-link clean-link flex" to={`/${favorite.Key}`}>
+                        <div className="favorite flex">
                             {favorite.LocalizedName}
                         </div>
                     </Link>
-                    <span onClick={() => { favorite.isFavorite = false; this.props.removeFavorite(favorite) }}>X</span></div>
+                    <span className="unlike flex" onClick={() => { favorite.isFavorite = false; this.props.removeFavorite(favorite) }}>x</span>
+                </div>
 
             })
             }</div>)

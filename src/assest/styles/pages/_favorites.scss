@@ -1,2 +1,28 @@
-.favorites-container {
+.favorite-container {
+  justify-content: center;
+  .favorite-link {
+    flex-direction: row;
+    .favorite {
+      font-family: aleg-light;
+      padding: 8px;
+      font-size: 35px;
+      border: 3px solid $clr1;
+      border-radius: 8px;
+      margin-block-end: 10px;
+      margin-inline-end: 8px;
+    }
+  }
+  .unlike {
+    // align-self: stretch;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    background-color: #0eda0e;
+    font-family: aleg-bold;
+    border-radius: 40px;
+    line-height: 1rem;
+    width: 20px;
+    height: 20px;
+    padding-bottom: 3px;
+  }
 }

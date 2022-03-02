@@ -18,10 +18,8 @@ export function loadFavorites() {
 
 export function removeFavorite(favorite) {
     return async (dispatch) => {
-        // favorite.isFavorite = false
         console.log(favorite);
         try {
-            favorite.isFavorite = false
             await favoriteService.remove(favorite.Key)
             const favoriteId = favorite.Key
             dispatch({ type: 'REMOVE_FAVORITE', favoriteId })
@@ -34,9 +32,7 @@ export function removeFavorite(favorite) {
 export function addFavorite(favorite) {
     return async (dispatch) => {
         try {
-            favorite.isFavorite = true
             await favoriteService.save(favorite)
-            // const favorite = city.Key
             dispatch({ type: 'ADD_FAVORITE', favorite })
         } catch (err) {
             console.log('Can\'t add favorite ', err)

@@ -1,10 +1,35 @@
-.day-card {
-  border: 2px solid $clr8;
-  border-radius: 8px;
-  margin-inline-end: 8px;
-  padding: 10px;
-  img {
-    width: 100px;
-    height: 100px;
+.forecast-container {
+  flex-wrap: wrap;
+  justify-content: space-around;
+  .card-container {
+    flex-direction: column;
+    flex-wrap: wrap;
+    .location-and-like {
+      flex-direction: column;
+      margin-block-end: 8px;
+      .city-name {
+        text-align: center;
+        margin-block-end: 8px;
+      }
+      .like-icon {
+        height: 30px;
+        width: 30px;
+        color: $clr1;
+        align-self: center;
+      }
+    }
+    .day-card {
+      flex-direction: row;
+      border: 2px solid $clr8;
+      border-radius: 8px;
+      margin-inline-end: 18px;
+      margin-block-end: 25px;
+      width: 230px;
+      padding: 10px;
+      img {
+        width: 100px;
+        height: 100px;
+      }
+    }
   }
 }

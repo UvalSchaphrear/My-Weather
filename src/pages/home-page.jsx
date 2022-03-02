@@ -59,9 +59,9 @@ class _HomePage extends React.Component {
             <div className="search-bar flex">
                 <SearchBar submitSearch={this.submitSearch} />
             </div>
-            <div className="home-page flex">
+            <div className="forecast-layout main-container flex">
                 {/* {!!this.state.forecast.length && <span onClick={this.onAddToFavorites}>Save to Favorites</span>} */}
-                <div className="flex">
+                <div className="forecast-container flex">
                     {!!this.state.forecast.length &&
                         <ForecastDisplay favorites={favorites} city={this.state.city} forecast={forecast} />}
                 </div>

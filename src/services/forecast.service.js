@@ -344,7 +344,6 @@ export const forecastService = {
 }
 
 async function getByKey(cityKey) {
-
     return gCities.find(city => city.Key === cityKey)
 }
 
