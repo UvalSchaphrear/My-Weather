@@ -30,6 +30,9 @@
       &:hover {
         color: $clr11;
         background-color: $clr10;
+        .search-icon {
+          color: $clr11;
+        }
       }
       .search-input {
         font-size: 15px;
@@ -39,6 +42,9 @@
         height: 50px;
         width: unset;
         background-color: unset;
+      }
+      .search-icon {
+        color: $clr1;
       }
 
       &:focus {

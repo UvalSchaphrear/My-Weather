@@ -1,3 +1,97 @@
+
+// export const SearchBar = (props) => {
+//     // state = {
+//     //     searchBy: {
+//     //         LocalizedName: ''
+//     //     },
+//     //     cities: [],
+//     //     isModalOpen: false
+
+//     // }
+
+//     const [searchBy, setSearchBy] = useState({})
+//     const [cities, setCities] = useState([])
+//     const isModalOpen = useRef(false)
+
+
+//     const onCitySelect = (city) => {
+//         // this.setState({ searchBy: { ...this.state.searchBy, LocalizedName: city }, isModalOpen: false })
+//         console.log(city);
+//         const searchBy = city
+//         console.log(searchBy);
+//         setSearchBy(searchBy)
+
+//         isModalOpen.current = false
+//         console.log(isModalOpen.current);
+
+//     }
+
+//     const onSubmitSearch = async () => {
+//         await props.submitSearch(searchBy)
+//         console.log(searchBy);
+//         clearInput()
+//     }
+
+//     const clearInput = () => {
+//         const searchBy = {}
+//         setSearchBy(searchBy)
+//     }
+
+//     // debounce = (callback, delay) => {
+//     //     let timer
+//     //     return (...args) => {
+//     //         clearTimeout(timer)
+//     //         timer = setTimeout(() => callback(...args), delay)
+//     //     }
+//     // }
+
+//     // debouncedLog = debounce(text => console.log(text), 500)
+
+
+//     const handleChange = async (ev) => {
+//         ev.preventDefault()
+//         const value = await ev.target.value
+//         // this.setState({ searchBy: { ...this.state.searchBy, LocalizedName: value }, isModalOpen: true })
+//         console.log(value);
+//         const searchBy = value
+//         setSearchBy(searchBy)
+//         isModalOpen.current = true
+
+//         // console.log(this.state.cities);
+
+
+
+//         forecastService.getLocations(value)
+//             .then(city => {
+//                 // this.setState({ cities: city })
+//                 const cities = city
+//                 setCities(cities)
+//             })
+//         // console.log(cities);
+//     }
+
+
+//     // const { cities, isModalOpen, searchBy } = this.state
+//     return <main className="flex">
+//         <section>
+//             <div className="search-container flex">
+//                 <input className="search-input" type="text" value={searchBy.LocalizedName ? searchBy.LocalizedName : ''} autoComplete="off" name="cities" placeholder="Search..." onChange={handleChange} />
+//                 <Link className="submit flex" onClick={onSubmitSearch} to={`/${searchBy.Key}`}>
+//                     <div onClick={onSubmitSearch}><FontAwesomeIcon icon={faMagnifyingGlass} /></div>
+//                 </Link>
+//             </div>
+//             {isModalOpen.current && !!cities.length && <div className="dropdown-menu flex">
+//                 {cities.map(city => {
+//                     return <div key={city.Key}>
+//                         <span className="dropdown-option" onClick={() => { onCitySelect(city.LocalizedName) }}>  {city.LocalizedName} </span>
+//                     </div>
+//                 })}
+//             </div>}
+//         </section>
+//     </main>
+// }
+
+
 // const gForecasts = [{
 //     "Headline": {
 //         "EffectiveDate": "2022-02-25T19:00:00+04:00",

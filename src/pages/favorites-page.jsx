@@ -13,7 +13,7 @@ class _Favorites extends React.Component {
         const { favorites } = this.props
         if (!favorites.length || !favorites) return <h1>'Loading'</h1>
         return (
-            <div className="main-container flex"> {favorites.map(favorite => {
+            <div className="favorite-list main-container"> {favorites.map(favorite => {
                 return <div className="favorite-container flex" key={favorite.Key}>
                     <Link className="favorite-link clean-link flex" to={`/${favorite.Key}`}>
                         <div className="favorite flex">
