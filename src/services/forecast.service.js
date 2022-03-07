@@ -35,7 +35,7 @@ async function getLocations(searchLetters) {
         })
 
         if (!filteredLocs.length) {
-            const res = await axios.get(`http://dataservice.accuweather.com/locations/v1/cities/autocomplete?apikey=${API_KEY}&q=${searchLetters}
+            const res = await axios.get(`https://dataservice.accuweather.com/locations/v1/cities/autocomplete?apikey=${API_KEY}&q=${searchLetters}
             `)
 
             filteredLocs = res.data
@@ -52,7 +52,7 @@ async function getLocations(searchLetters) {
 
 async function getForecast(locationKey) {
     try {
-        const res = await axios.get(`http://dataservice.accuweather.com/forecasts/v1/daily/5day/${locationKey.Key}?metric=true&apikey=${API_KEY}`)
+        const res = await axios.get(`https://dataservice.accuweather.com/forecasts/v1/daily/5day/${locationKey.Key}?metric=true&apikey=${API_KEY}`)
         const forecast = res.data
         return forecast.DailyForecasts
 
