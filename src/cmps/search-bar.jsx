@@ -34,7 +34,6 @@ export const SearchBar = (props) => {
     const debounced = useCallback(debounce(searchBy => forecastService.getLocations(searchBy)
         .then(city => {
             const cities = city
-            console.log('DEBOUNCED FUNCTION ACTIVATED')
             setCities(cities)
         }), 2000), [])
 
@@ -65,7 +64,7 @@ export const SearchBar = (props) => {
             {isModalOpen.current && !!cities.length && <div className="dropdown-menu flex">
                 {cities.map(city => {
                     return <div key={city.Key}>
-                        <span className="dropdown-option" onClick={() => { onCitySelect(city) }}>  {city.LocalizedName} </span>
+                        <span className="dropdown-option" onClick={() => { onCitySelect(city) }}>  {city.LocalizedName}, {city.Country.LocalizedName} </span>
                     </div>
                 })}
             </div>}
