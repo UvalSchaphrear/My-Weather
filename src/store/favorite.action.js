@@ -1,5 +1,4 @@
 import { favoriteService } from '../services/favorite.service.js'
-import { storageService } from '../services/async.storage.service.js'
 
 
 export function loadFavorites() {
@@ -18,7 +17,6 @@ export function loadFavorites() {
 
 export function removeFavorite(favorite) {
     return async (dispatch) => {
-        console.log(favorite);
         try {
             await favoriteService.remove(favorite.Key)
             const favoriteId = favorite.Key

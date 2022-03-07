@@ -2,7 +2,7 @@ import { createStore, applyMiddleware, combineReducers, compose } from 'redux'
 import thunk from 'redux-thunk'
 
 
-import { favoriteReducer } from "./favortie.reducer";
+import { favoriteReducer } from "./favorite.reducer";
 
 const rootReducer = combineReducers({
     favoriteModule: favoriteReducer,

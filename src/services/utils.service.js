@@ -41,10 +41,8 @@ function getDay(timestamp) {
 }
 
 function getDate(timestamp) {
-    // console.log(timestamp);
     var rawDate = new Date(timestamp * 1000)
     var date = (rawDate.getDate() > 10 ? rawDate.getDate() : '0' + rawDate.getDate()) + '/' + ((rawDate.getMonth() + 1) > 10 ? (rawDate.getMonth() + 1) : '0' + (rawDate.getMonth() + 1)) + '/' + rawDate.getFullYear()
-    // console.log(date)
     return date
 }
 

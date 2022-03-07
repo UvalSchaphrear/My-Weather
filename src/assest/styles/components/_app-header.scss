@@ -6,6 +6,13 @@
     font-family: r-regular;
     font-size: 30px;
     color: rgb(14, 218, 14);
+    &:hover {
+      color: green;
+      span {
+        color: rgb(14, 218, 14);
+      }
+    }
+    cursor: pointer;
     span {
       color: green;
       font-size: 30px;
@@ -20,5 +27,8 @@
   }
   a {
     padding-left: 20px;
+    &:hover {
+      color: rgb(14, 218, 14);
+    }
   }
 }

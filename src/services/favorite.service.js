@@ -9,16 +9,6 @@ export const favoriteService = {
     query,
     remove
 }
-// function query(STORAGE_KEY, delay = 500) {
-//     var entities = JSON.parse(localStorage.getItem(STORAGE_KEY)) || []
-//     // console.log(entities);
-//     return new Promise((resolve, reject) => {
-//         setTimeout(() => {
-//             resolve(entities)
-//         }, delay)
-//     })
-//     // return Promise.resolve(entities)
-// }
 
 async function query() {
     try {

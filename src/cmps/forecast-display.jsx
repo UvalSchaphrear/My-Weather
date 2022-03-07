@@ -1,7 +1,7 @@
 import React from "react"
 import { connect } from "react-redux"
 import { utilService } from "../services/utils.service"
-import { loadFavorites, addFavorite, removeFavorite } from '../store/favortie.action.js'
+import { loadFavorites, addFavorite, removeFavorite } from '../store/favorite.action.js'
 import { faHeart as fullHeart } from '@fortawesome/free-solid-svg-icons'
 import { faHeart as emptyHeart } from '@fortawesome/free-regular-svg-icons'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
@@ -46,7 +46,7 @@ class _ForecastDisplay extends React.Component {
 
 
     render() {
-        const { forecast, city, favorites } = this.state
+        const { forecast, city, favorites } = this.props
         const heartIcon = (this.changeFavIcon(city)) ? fullHeart : emptyHeart
 
         return <>
@@ -58,7 +58,7 @@ class _ForecastDisplay extends React.Component {
                 <div className="forecast-container flex">
                     {forecast.map(dailyForecast => {
                         return <div className="day-card" key={dailyForecast.Date}>
-                            <div onClick={() => console.log()}></div>
+                            {/* <div onClick={() => console.log()}></div> */}
                             <span>{utilService.getDay(dailyForecast.EpochDate)} {utilService.getDate(dailyForecast.EpochDate)} </span>
                             <div>Temperatures between {dailyForecast.Temperature.Maximum.Value}{dailyForecast.Temperature.Maximum.Unit} and {dailyForecast.Temperature.Minimum.Value}{dailyForecast.Temperature.Minimum.Unit} </div>
                             <div>At daytime weather will be {dailyForecast.Day.IconPhrase}</div>
