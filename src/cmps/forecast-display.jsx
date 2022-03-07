@@ -28,7 +28,6 @@ class _ForecastDisplay extends React.Component {
             })
     }
 
-
     onAddToFavorites = async (ev) => {
         ev.preventDefault()
         const { city, favorites } = this.props
